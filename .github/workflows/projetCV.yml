@@ -1,24 +1,13 @@
 on:
   push:
-    branches:
-      - main
-
+    branches: ["main"]
+  pull-request:
+    branches: ["main"]
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout du code
-        uses: actions/checkout@v2
-
-      - name: Installer les dépendances
-        run: npm install
-
+    
       - name: Build du projet
         run: npm run build
-
-      - name: Déploiement sur GitHub Pages
-        uses: peaceiris/actions-main@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./projetCV
