@@ -80,7 +80,6 @@
 {
     box-sizing: border-box;
     margin: auto;
-    border: 1px solid black;
 }
 #profil
 {
@@ -97,10 +96,6 @@
     background-clip: border-box;
     align-items: center;
     height: 281px;
-}
-#corps
-{
-    align-items: center;
 }
 
 .section
